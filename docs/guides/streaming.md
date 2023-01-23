@@ -7,6 +7,11 @@ description: When, why, and how to stream with React 18 and Remix's deferred API
 
 Remix supports the [web streaming API][web-streaming-api] as a first-class citizen. Additionally, JavaScript server runtimes have support for streaming responses to the client.
 
+## Prerequisites
+If you'd like to use the streaming APIs, you will need a nodejs version of 15 or higher. Remix's streaming implementation relies on APIs such as [`AbortController`][[abortController-api]] and [`WebStreams`][web-streaming-api]
+
+
+
 <docs-warning>NOTE: Deferred UX goals rely on streaming responses. Some popular hosts do not support streaming responses. In general, any host built around AWS Lambda does not support streaming and any bare metal / VM provider will. Make sure your hosting platform supports before using this API.</docs-warning>
 
 ## The problem
@@ -423,4 +428,5 @@ So just keep this in mind: **Deferred is 100% only about the initial load of a r
 [useasyncvalue]: ../api/remix#useasyncvalue
 [react-lazy]: https://reactjs.org/docs/code-splitting.html#reactlazy
 [web-streaming-api]: https://developer.mozilla.org/en-US/docs/Web/API/Streams_API
+[abortController-api]: https://developer.mozilla.org/en-US/docs/Web/API/AbortController
 [graphs-showing-how-document-and-slow-data-requests-sent-over-the-same-response-significantly-speed-up-the-largest-contentful-paint]: https://user-images.githubusercontent.com/12063586/179609347-36bd7d32-c8af-4e24-9e89-06d9abc0a19f.svg
